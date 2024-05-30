@@ -1,0 +1,52 @@
+.header{
+  background-color: rgb(14, 14, 14);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  &__menu{
+    display: flex;
+    align-items: center;
+    
+    &__logo{
+      padding-right: 19px;
+    }
+  
+    &__nav{
+      
+      .external-links{
+        display: flex;
+        list-style: none;
+  
+        &__item{
+          padding-right: 50px;
+          .link{
+            text-decoration: none;
+            color: white;
+            opacity: 0.8;
+  
+            i{
+              margin-right: 8px;
+              opacity: 1;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__search{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+.fa-magnifying-glass{
+  color: white;
+  font-size: 28px;
+}

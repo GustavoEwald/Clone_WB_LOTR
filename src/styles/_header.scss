@@ -1,0 +1,132 @@
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  &__navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #0e0e0e;
+    height: 55px;
+
+    &__esquerda{
+      padding-left: 21px;
+      display: flex;
+      align-items: center;
+      .menu-hamburger{
+        padding-left: 21px;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        .fa-bars, .fa-xmark{
+          color: white;
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__search-input{
+      position: absolute;
+      margin-left: 20px;
+      height: 85%;
+      width: 0;
+      transition: width 0.4s;
+      right: 55px;
+      background-color: rgb(242, 242, 242);
+      border: none;
+    }
+    
+    &__search-input--active{
+      width: calc(100% - 155px);
+      transition: width 0.4s;
+      padding-left: 55px;
+      &::placeholder{
+        color: rgba(118, 118, 118, 0.7);
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+    
+    .input-icon{
+      position: absolute;
+      right: 20px;
+      color:transparent;
+      font-size: 24px;
+    }
+    .input-icon--active{
+      transform: translateX(-87vw);
+      transition: transform 0.4s;
+      color: black;
+    }
+
+    &__search-btn{
+      position: absolute;
+      right: 0;
+      padding-right: 13px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      .fa-magnifying-glass, .fa-xmark{
+        color: white;
+        font-size: 24px;
+        padding-right: 7px;
+      }
+    }
+  }
+
+  .header__navbar__dropdown{
+    background-color: #0e0e0e;
+    opacity: 0.99;
+    height: calc(100vh - 55px);
+    top: 55px;
+    transform: translateY(-100%) translateX(-100%);
+    position: fixed;
+    width: 100%;
+    transition: all .3s ease;
+    .external-links{
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 55px;
+      padding-left: 0;
+      
+      &__item{
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom:1px solid rgba(255, 255, 255, 0.1);
+
+        &:hover{
+          padding-left: 30px;
+          scale: 1.05;
+
+          @media (max-width:990px){
+            padding-left: 12px;
+          }
+        }
+
+        .link{
+          text-decoration: none;
+          color: white;
+          margin-left: 24px;
+
+          .i{
+            padding-right: 40px;
+          }
+        }
+
+        .link i{
+          padding-right: 40px;
+        }
+        
+      }
+    }
+    
+    &--open{
+      transform: translateY(0) translateX(0);
+      transition: all .3s ease;
+      position: fixed;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.navbar{
+  height: 41px;
+  background-color: rgb(26, 26, 26);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+  position: sticky;
+  z-index: 998;
+  top: 50px;
+
+  @media (max-width: 990px){
+    display: none;
+  }
+
+  &__leftbuttons{
+    display: flex;
+
+    &__button--first{
+      clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
+      background-color: white;
+      color: #005aa3;
+      font-weight: bold;
+      width: 100px;
+      height: 39px;
+      margin-left: -15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+        background-color: #005aa3;
+      }
+      &:hover span{
+        color: white;
+      }
+    }
+    &__button--second{
+      clip-path: polygon(95.5% 0%, 100% 50%, 95.5% 100%, 0% 100%, 3.5% 50%, 0% 0%);
+      background-color: white;
+      color: #005aa3;
+      font-weight: bold;
+      width: 430px;
+      height: 39px;
+      margin-left: -9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+        background-color: #005aa3;
+      }
+      &:hover span{
+        color: white;
+      }
+    }
+  }
+
+  &__rightbuttons{
+    display: flex;
+    align-items: center;
+    &__link{
+      margin-left: 21px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
